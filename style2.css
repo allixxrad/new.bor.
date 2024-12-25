@@ -24,7 +24,7 @@ body {
     position: absolute;
     top: 0px;
     right: 0;
-    border-radius: 5px;
+    border-radius: 0px;
     z-index: 1;
     left: 100px;
     width: 300px;
@@ -32,7 +32,7 @@ body {
 
 .menu a {
     color: rgb(255, 255, 255);
-    padding: 15px;
+    padding: 13px;
     text-decoration: none;
     text-align: center;
 }
@@ -53,8 +53,8 @@ body {
 .t{
    display: flex;
     background-color:rgb(243, 243, 243);
-    width: 280px;
-    height: 1870px;
+    width: 320px;
+    height: 1720px;
     margin-left: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   border-radius:10px;
