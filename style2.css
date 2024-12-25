@@ -53,7 +53,7 @@ body {
 .t{
    display: flex;
     background-color:rgb(243, 243, 243);
-    width: 360px;
+    width: 340px;
     height: 1770px;
     margin-left: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
