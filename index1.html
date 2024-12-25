@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new year</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* стили для элемента body */
+        body {
+          margin: 0;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+          sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+        }
+    
+        /* дополнительные стили для этого примера */
+        .itcss__items {
+          counter-reset: slide;
+        }
+    
+        .itcss__item {
+          counter-increment: slide;
+        }
+    
+        .itcss__item>div::before {
+          content: counter(slide);
+          position: absolute;
+          top: 10px;
+          right: 20px;
+          color: #fff;
+          font-style: italic;
+          font-size: 32px;
+          font-weight: bold;
+        }
+      </style>
+
+
+    <script defer src="simple-adaptive-slider.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // активация слайдера
+        new ItcSimpleSlider('.itcss', {
+          loop: false,
+          autoplay: true,
+          swipe: true,
+          onInit(slider) {
+            console.log(this);
+          }
+        });
+      });
+    </script>
+</head>
+<body>
+    <button class="burger" onclick="toggleMenu()">☰ Меню</button>
+    <div class="menu" id="menu">
+        <a href="index.html">Главная</a>
+        <a href="index1.html">Новый год</a>
+        <a href="index3.html">Ярмарка</a>
+        
+    </div>
+
+   <h1 class="l">Новый Год в Новой Боровой</h1>
+   <p class="o">Новый год в Новой Боровой – это время чудес!
+
+    Собраться с близкими, чтобы вместе отмечать. А потом обмениваться подарками и создавать моменты в атмосфере тепла и заботы. <br>
+    В Новой Боровой свой антураж. На Центральной площади поставили большую елку и детские горки. Теперь это место притяжения всех живущих в районе ребятишек. Присутствуют и красочные фотозоны — с красным паровозом и маленькой стильной машинкой в окружении елочек. <br>
+    Весь район украшен праздничной иллюминацией и светящимися фигурками. Огоньки в окнах и на подъездах — предновогодний вайб царит едва ли не в каждом уголке Новой Боровой.
+  </p>
+    
+    <h2 class="i">Новый год 2022</h2>
+   
+
+
+
+            <div id="slider-container">
+                <div id="top">
+                
+                    <div id="slider">
+                        <img src="https://realt.by/typo3temp/pics/6b/6a/6b6ab5005da801d9793e21ec9a60bd65.jpg" alt="" class="slider-image block">
+                        <img src="https://realt.by/typo3temp/pics/0a/93/0a936143e8876091076b03844c3066c1.jpg" alt="" class="slider-image">
+                        <img src="https://realt.by/typo3temp/pics/c0/22/c022155c2ae42fa0aa0ea2d3dcc269e0.jpg" alt="" class="slider-image">
+                        <img src="https://content.onliner.by/news/1100x5616/f8ada408919f87996d70a4ee5137122e.jpeg" alt="" class="slider-image">
+                    </div>
+                   
+                </div>
+                <div id="bottom"></div>
+
+                
+            </div>
+            <script src="./first_slider.js"></script>
+<script>
+
+const arrowLeft = document.querySelector(".arrow-left");
+const arrowRight = document.querySelector(".arrow-right");
+const slides = document.querySelectorAll(".slider-image");
+const bottom = document.getElementById("bottom");
+
+let currentSlideIndex = 0;
+const paginationCircles = [];
+
+function createPaginationCircle() {
+    const div = document.createElement("div");
+    div.className = "pagination-circle";
+    bottom.appendChild(div);
+    paginationCircles.push(div);
+}
+
+function addPagination() {
+    slides.forEach(createPaginationCircle);
+    paginationCircles[0].classList.add("active");
+    paginationCircles.forEach((circle, index) => {
+        circle.addEventListener("click", () => changeSlide(index));
+    });
+}
+
+function addActiveClass() {
+    paginationCircles[currentSlideIndex].classList.add("active");
+}
+
+function removeActiveClass() {
+    paginationCircles[currentSlideIndex].classList.remove("active");
+}
+
+function showSlide() {
+    slides[currentSlideIndex].classList.add("block");
+}
+
+function hideSlide() {
+    slides[currentSlideIndex].classList.remove("block");
+}
+
+function changeSlide(slideIndex) {
+    hideSlide();
+    removeActiveClass();
+    currentSlideIndex = slideIndex;
+    addActiveClass();
+    showSlide();
+}
+
+function nextSlide() {
+    let newSlideIndex = currentSlideIndex + 1;
+    if(newSlideIndex > slides.length - 1) {
+        newSlideIndex = 0;
+    }
+    changeSlide(newSlideIndex);
+}
+
+function previousSlide() {
+    let newSlideIndex = currentSlideIndex - 1;
+    if(newSlideIndex < 0) {
+        newSlideIndex = slides.length - 1;
+    }
+    changeSlide(newSlideIndex);
+}
+
+addPagination();
+arrowLeft.addEventListener("click", previousSlide);
+arrowRight.addEventListener("click", nextSlide);
+</script>
+
+          
+           
+          
+ 
+<h2 class="t">Новый год 2023</h2>
+          
+ <!-- Разметка слайдера -->
+ <div class="itcss">
+    <div class="itcss__wrapper">
+      <div class="itcss__items">
+        <div class="itcss__item">
+          <div > <img src="https://realt.by/typo3temp/pics/71/b9/71b930c4a4f97383bc1a8e4afa718b41.jpg" alt=""></div>
+        </div>
+        <div class="itcss__item">
+          <div class="height: 250px; "><img src="https://realt.by/typo3temp/pics/8e/da/8eda979b6383f956c6348746fd64296a.jpg" alt=""
+           ></div>
+        </div>
+        <div class="itcss__item">
+          <div> <img src="https://realt.by/typo3temp/pics/19/5e/195ee170003d88e306ad2f92cfc4e925.jpg" alt=""></div>
+        </div>
+        <div class="itcss__item">
+          <div><img src="https://realt.by/typo3temp/pics/1b/8f/1b8f75449602a334ff06c405105435a4.jpg" alt=""></div>
+        </div>
+      </div>
+    </div>
+    <button class="itcss__btn itcss__btn_prev" role="button" data-slide="prev"></button>
+    <button class="itcss__btn itcss__btn_next" role="button" data-slide="next"></button>
+  </div>
+ 
+  <h2 class="m">Новый год 2024</h2>
+  <div class="image-container9">
+    <div class="p"><img src="https://content.onliner.by/news/1100x5616/72c1e783f48506bc103a171b59759e05.jpg" alt="Описание изображения"
+     
+      ></div>
+    
+</div>
+<div class="image-container5">
+    <div class="p"><img src="https://content.onliner.by/news/1100x5616/6a530f14faf685487ccada6fe238dca4.jpg" alt="Описание изображения"></div>
+    
+</div>
+<div class="image-container6">
+    <div class="p"><img src="https://content.onliner.by/news/1100x5616/b40bacccb14922256ec6457bc32fb08f.jpg" alt="Описание изображения"></div>
+    
+</div>
+<div class="image-container7">
+    <div class="p"><img src="https://content.onliner.by/news/1100x5616/82426a37182bb2c29d06f7a353ac7d08.jpg" alt="Описание изображения"></div>
+    
+</div>
+</div>
+<div class="image-container8">
+<div class="p"><img src="https://content.onliner.by/news/1100x5616/c2cb1501a630f5c7c99602f77d687b6c.jpg 
+    " alt="Описание изображения" ></div>
+
+</div>
+
+
+
+<div class="w">
+  <img src="data:image/png;base64,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" alt=""
+  width="150"
+  >
+  
+</div>
+ 
+
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('menu');
+        menu.classList.toggle('show');
+    }
+</script>
+
+
+<script type="text/javascript"src="main.js"></script>
+</body>
+</html>
